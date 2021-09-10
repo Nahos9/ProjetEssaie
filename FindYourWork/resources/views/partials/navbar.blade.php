@@ -1,7 +1,7 @@
 <div class="flex justify-between items-center py-4 bg-gray-200 h-20">
         <h1 class="mx-4">FindYour<span class="text-blue-600 text-2xl">WORK</span></h1>
     <nav class="">
-       <a class="mx-4 hover:text-red-500 text-semibold"  href="">Nos missions</a>
+       <a class="mx-4 hover:text-red-500 text-semibold"  href="{{ route('jobs.index')}}">Nos missions</a>
        @guest
          <a class="mx-4 hover:text-red-500 text-semibold" href="{{route('login')}}">Se connecter</a>
          <a class="mx-4 hover:text-red-500 text-semibold" href="{{ route('register')}}">S'en registrer</a>
