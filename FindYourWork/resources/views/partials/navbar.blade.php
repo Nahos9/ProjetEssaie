@@ -13,6 +13,7 @@
             <a class="" href="">{{auth()->user()->name}}</a>
         </div>
         <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+        <livewire:flash />
     @csrf</form>
         @endguest
     </nav>
