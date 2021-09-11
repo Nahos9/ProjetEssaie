@@ -2,6 +2,7 @@
         <h1 class="mx-4">FindYour<span class="text-blue-600 text-2xl">WORK</span></h1>
     <nav class="">
         <livewire:search />
+        
        <a class="mx-4 hover:text-red-500 text-semibold"  href="{{ route('jobs.index')}}">Nos missions</a>
        @guest
          <a class="mx-4 hover:text-red-500 text-semibold" href="{{route('login')}}">Se connecter</a>
@@ -13,8 +14,9 @@
             <a class="" href="">{{auth()->user()->name}}</a>
         </div>
         <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
-        <livewire:flash />
+        
     @csrf</form>
+    <livewire:flash />
         @endguest
     </nav>
 </div>
