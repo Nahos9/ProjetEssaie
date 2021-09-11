@@ -39,7 +39,11 @@ class Search extends Component
 
     public function showJob()
     {
-        return redirect()->route('show.jobs',[$this->jobs[$this->selectedIndex]['id']]);
+        if($this->jobs->isNotEmpty())
+       {
+           return redirect()->route('show.jobs',[$this->jobs[$this->selectedIndex]['id']]);
+
+       } 
     }
     public function updatedQuery()
     {
