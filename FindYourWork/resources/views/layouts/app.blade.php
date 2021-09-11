@@ -6,13 +6,16 @@
 
         <title>FindYourWORK</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <style>
-        </style>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+        @livewireStyles
+        
+
     </head>
     <body>
       <div class="container mx-auto px-4">
         @include('partials.navbar')
       @yield('content')
       </div>
+      @livewireScripts
     </body>
 </html>
