@@ -14,6 +14,7 @@ class Job extends Component
         {
             auth()->user()->likes()->toggle($this->job->id);
         }else{
+
             $this->emit('flash','Veillez-vous connecter pour liker svp','error');
         }
 

@@ -6,16 +6,19 @@ use Livewire\Component;
 
 class Flash extends Component
 {
-    protected $listeners = ['flash' => 'setMessage'];
     public $message;
+
     public $type;
 
+    protected $listeners = ['flash' => 'setFlashMessage'];
 
-    public function setMessage($message,$type)
+
+    public function setFlashMessage($message, $type)
     {
         $this->message = $message;
         $this->type = $type;
-        $this->dispatchBrowserEvent('flash-message');
+
+        $this->dispatchBrowserEvent('flash');
     }
     public function render()
     {
