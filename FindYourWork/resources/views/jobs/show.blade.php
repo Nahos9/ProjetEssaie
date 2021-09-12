@@ -7,4 +7,11 @@
         <p class="text-md text-gray-800 py-4">{{$id->description}}</p>
         <p class="text-gray-300 mb-4">Prix : {{number_format($id->price,2,',',' ').'£'}}</p>
     </div>
+    <section x-data="{open: false}">
+        <a href="" class="text-green-500 "@click="open = !open">Soumettre votre candidature ici</a>
+        <form x-show="open" x-clock class="w-full max-w-md" action="">
+                <textarea name="" id="" class="p-3 font-thin"></textarea>
+                <button type="submit" class="bg-green-500 px-3 py-2 block mt-2 rounded-full text-white">Soumettre</button>
+        </form>
+    </section>
 @endsection

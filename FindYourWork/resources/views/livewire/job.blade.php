@@ -12,7 +12,7 @@
         <p class="text-gray-300 mb-4">Prix : {{number_format($job->price,2,',',' ').'£'}}</p>
         <div class="flex ">
             <span class="h-2 w-2 bg-green-300 rounded-full mr-1 mt-8"></span>
-            <a class="h-1/2 w-75 py-2 px-3 rounded border rounded-full mt-4 bg-blue-400 text-gray-300 hover:bg-blue-600" href="">Voir la mission</a>
+            <a class="h-1/2 w-75 py-2 px-3 rounded border rounded-full mt-4 bg-blue-400 text-gray-300 hover:bg-blue-600" href="{{route('show.jobs',$this->job->id)}}">Voir la mission</a>
         </div>
     </div>
 </div>

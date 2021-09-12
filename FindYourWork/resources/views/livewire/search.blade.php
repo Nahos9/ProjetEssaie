@@ -1,4 +1,4 @@
-<div class="inline-block relative" x-data="{ open =  false}">
+<div class="inline-block relative" x-data="{ open: false}">
       <input @click.away="open = false " @click="open = true " class="bg-gray-300 hover:shadow-md focus:outline-none py-2 px-6 border-2 rounded-full" type="text" wire:model="query" name="" id="" placeholder="Rechercher une mission"
       wire:keydown.arrow-down.prevent="incrementIndex"
       wire:keydown.arrow-up.prevent="decrementIndex"
