@@ -14,11 +14,20 @@ class Job extends Model
     {
         return $query->where('status' ,1);
     }
+
+
     public function user()
     {
         $this->belongsTo(User::class);
     }
 
+
+    public function proposals()
+    {
+        return $this->hasMany(Proposal::class);
+    }
+
+    
     public function likes()
     {
         return $this->belongsToMany(User::class);

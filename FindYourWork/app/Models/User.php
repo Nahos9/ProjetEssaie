@@ -53,6 +53,11 @@ class User extends Authenticatable
         $this->hasMany(Job::class);
     }
 
+    public function proposals()
+    {
+        return $this->hasMany(Proposal::class);
+    }
+
     public function likes()
     {
         return $this->belongsToMany(Job::class);
